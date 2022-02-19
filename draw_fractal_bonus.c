@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   draw_fractal.c                                     :+:      :+:    :+:   */
+/*   draw_fractal_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeounpar <jeounpar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/19 16:07:46 by jeounpar          #+#    #+#             */
-/*   Updated: 2022/02/19 20:57:18 by jeounpar         ###   ########.fr       */
+/*   Created: 2022/02/19 20:57:09 by jeounpar          #+#    #+#             */
+/*   Updated: 2022/02/19 20:57:12 by jeounpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ static int	types_of_set(t_mlx *data, double a, double b)
 				+ a / data->img.pixel_rate - data->img.length / 2,
 				data->img.y_center + b / data->img.pixel_rate
 				- data->img.length / 2, data->img.julia_a, data->img.julia_b));
+	else if (data->img.types == 3)
+		return (burnigship_set(data->img.x_center
+				+ a / data->img.pixel_rate - data->img.length / 2,
+				data->img.y_center + b / data->img.pixel_rate
+				- data->img.length / 2));
 	else
 		return (0);
 }
