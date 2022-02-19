@@ -6,7 +6,7 @@
 #    By: jeounpar <jeounpar@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/18 23:05:35 by jeounpar          #+#    #+#              #
-#    Updated: 2022/02/19 16:10:09 by jeounpar         ###   ########.fr        #
+#    Updated: 2022/02/19 16:34:36 by jeounpar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,6 @@ fclean		: clean
 		make -C ./minilibx fclean
 		rm -f $(NAME)
 
-bouse		:
+bonus		:
 
 re			: fclean all
