@@ -6,12 +6,11 @@
 /*   By: jeounpar <jeounpar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 21:44:52 by jeounpar          #+#    #+#             */
-/*   Updated: 2022/02/19 14:08:06 by jeounpar         ###   ########.fr       */
+/*   Updated: 2022/02/19 14:20:39 by jeounpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractal.h"
-#include <math.h>
 
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
 
