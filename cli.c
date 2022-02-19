@@ -6,7 +6,7 @@
 /*   By: jeounpar <jeounpar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 21:44:47 by jeounpar          #+#    #+#             */
-/*   Updated: 2022/02/19 14:10:32 by jeounpar         ###   ########.fr       */
+/*   Updated: 2022/02/19 14:16:47 by jeounpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ double	ft_atof(const char *str);
 
 static void	errors(void)
 {
-	printf("\t./fractol Mandel\n\t./fractol Julia a(double) b(double)\n");
+	printf("\t./fractol Mandelbrot\n\t./fractol Julia a(double) b(double)\n");
 	printf("\tJulia Set default value [a = 0.285, b = 0.01]\n");
 	exit(1);
 }
@@ -32,7 +32,7 @@ void	parse_command(int argc, char *argv[], t_mlx *data)
 
 	if (argc < 2 || argc > 4)
 		errors();
-	else if (ft_strcmp(argv[1], "Mandel") == 0 && argc == 2)
+	else if (ft_strcmp(argv[1], "Mandelbrot") == 0 && argc == 2)
 		data->img.types = 1;
 	else if (ft_strcmp(argv[1], "Julia") == 0 && (argc == 2 || argc == 4))
 	{
