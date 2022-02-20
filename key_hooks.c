@@ -6,7 +6,7 @@
 /*   By: jeounpar <jeounpar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 21:45:03 by jeounpar          #+#    #+#             */
-/*   Updated: 2022/02/19 14:49:16 by jeounpar         ###   ########.fr       */
+/*   Updated: 2022/02/20 18:20:30 by jeounpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,12 +57,32 @@ int	mouse_event(int event, int x, int y, t_mlx *data)
 	return (event);
 }
 
+void	reset_fractal(t_mlx *data)
+{
+	data->img.x_center = 0;
+	data->img.y_center = 0;
+	data->img.pixel_rate = 200;
+	data->img.length = 4;
+}
+
 int	keyboard_event(int event, t_mlx *data)
 {
 	if (event == 53)
 	{
 		mlx_destroy_window(data->mlx, data->win);
 		exit(0);
+	}
+	else if (event == 15 || event == 18 || event == 19 || event == 20)
+	{
+		reset_fractal(data);
+		if (event == 18)
+			data->img.types = 1;
+		else if (event == 19)
+			data->img.types = 2;
+		else if (event == 20)
+			data->img.types = 3;
+		draw_fractal(data);
+		mlx_put_image_to_window(data->mlx, data->win, data->img.img, 0, 0);
 	}
 	return (0);
 }
