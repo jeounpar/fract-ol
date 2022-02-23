@@ -6,7 +6,7 @@
 /*   By: jeounpar <jeounpar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 21:45:07 by jeounpar          #+#    #+#             */
-/*   Updated: 2022/02/19 16:16:54 by jeounpar         ###   ########.fr       */
+/*   Updated: 2022/02/23 20:42:29 by jeounpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include "minilibx/mlx.h"
 
-# define MAX_ITER 50
 # define ZOOM 1.1
 
 typedef struct s_data
@@ -26,6 +25,7 @@ typedef struct s_data
 	int		line_length;
 	int		endian;
 	int		types;
+	int		max_iter;
 	double	x_center;
 	double	y_center;
 	double	length;
@@ -40,5 +40,11 @@ typedef struct s_mlx
 	void	*win;
 	t_data	img;
 }	t_mlx;
+
+typedef struct s_doubles
+{
+	double	a;
+	double	b;
+}	t_doubles;
 
 #endif

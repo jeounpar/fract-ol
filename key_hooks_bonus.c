@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_hooks.c                                        :+:      :+:    :+:   */
+/*   key_hooks_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeounpar <jeounpar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 21:45:03 by jeounpar          #+#    #+#             */
-/*   Updated: 2022/02/23 20:36:10 by jeounpar         ###   ########.fr       */
+/*   Updated: 2022/02/23 20:40:32 by jeounpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,13 +78,15 @@ int	keyboard_event(int event, t_mlx *data)
 		mlx_destroy_window(data->mlx, data->win);
 		exit(0);
 	}
-	else if (event == 15 || event == 18 || event == 19)
+	else if (event == 15 || event == 18 || event == 19 || event == 20)
 	{
 		reset_fractal(data);
 		if (event == 18)
 			data->img.types = 1;
 		else if (event == 19)
 			data->img.types = 2;
+		else if (event == 20)
+			data->img.types = 3;
 		draw_fractal(data);
 		mlx_put_image_to_window(data->mlx, data->win, data->img.img, 0, 0);
 	}

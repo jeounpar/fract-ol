@@ -6,7 +6,7 @@
 #    By: jeounpar <jeounpar@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/18 23:05:35 by jeounpar          #+#    #+#              #
-#    Updated: 2022/02/19 21:15:09 by jeounpar         ###   ########.fr        #
+#    Updated: 2022/02/23 20:36:53 by jeounpar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS		= -Wall -Wextra -Werror
 MLX			= -O3 -L./minilibx -lmlx -framework OpenGL -framework Appkit
 SRCS		= cli.c fractal_set.c draw_fractal.c key_hooks.c main.c utils.c
 OBJECTS		= $(SRCS:.c=.o)
-BONUS_SRCS	= cli_bonus.c fractal_set_bonus.c draw_fractal_bonus.c key_hooks.c main.c utils.c
+BONUS_SRCS	= cli_bonus.c fractal_set_bonus.c draw_fractal_bonus.c key_hooks_bonus.c main.c utils.c
 OBJ_BONUS	= $(BONUS_SRCS:.c=.o)
 
 ifdef WITH_BONUS

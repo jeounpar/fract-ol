@@ -6,7 +6,7 @@
 /*   By: jeounpar <jeounpar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 21:44:36 by jeounpar          #+#    #+#             */
-/*   Updated: 2022/02/20 18:11:55 by jeounpar         ###   ########.fr       */
+/*   Updated: 2022/02/23 20:14:41 by jeounpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static void	init_imagedata(t_mlx *data)
 	data->img.julia_a = 0.285;
 	data->img.julia_b = 0.01;
 	data->img.types = 0;
+	data->img.max_iter = 50;
 }
 
 static void	init_mlxdata(t_mlx *data)
